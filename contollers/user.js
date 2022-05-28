@@ -24,19 +24,19 @@ module.exports.loginUser = async (req, res) => {
           expiresIn: '10m',
         }
       );
-      const refreshToken = jwt.sign(
-        { email },
-        process.env.REFRESH_TOKEN_SECRET,
-        { expiresIn: '15m' }
-      );
+      // const refreshToken = jwt.sign(
+      //   { email },
+      //   process.env.REFRESH_TOKEN_SECRET,
+      //   { expiresIn: '15m' }
+      // );
 
       //   await pool.query('UPDATE users SET refresh_token = $1 WHERE email = $2', [
       //     refreshToken,
       //     email,
       //   ]);
-      res.cookie('jwt', refreshToken, {
-        maxAge: 15 * 60 * 1000,
-      });
+      // res.cookie('jwt', refreshToken, {
+      //   maxAge: 15 * 60 * 1000,
+      // });
       return res.json({
         user: {
           id: results.rows[0].id,
