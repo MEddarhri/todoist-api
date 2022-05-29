@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  return res.send('Worked');
+  return res.send('API RUNNING');
 });
 
 app.use('/api', userRoute);
