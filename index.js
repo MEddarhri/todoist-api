@@ -28,6 +28,6 @@ app.get('/', (req, res) => {
 app.use('/api', userRoute);
 app.use('/api/todo', todosRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log(`server listening on ${process.env.PORT}`);
+app.listen(8080, () => {
+  console.log('server listening on 8080');
 });
